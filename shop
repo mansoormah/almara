@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="de"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260930-05-8966983","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALMARA — Timeless Style. Modern You.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Libre+Franklin:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f4efe6;
+      --stone: #ded2c1;
+      --sand: #c6b29a;
+      --ink: #17130f;
+      --coffee: #31251d;
+      --muted: #71675c;
+      --line: rgba(23,19,15,.25);
+      --white: #fffdf8;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      width: 100%;
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Libre Franklin", sans-serif;
+      letter-spacing: .06em;
+    }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: wait; opacity: .56; }
+    button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 2px solid #a38562;
+      outline-offset: 3px;
+    }
+
+    .app-wrapper { width: 100%; overflow: hidden; }
+    .serif { font-family: "Libre Baskerville", serif; }
+    .fine-line { border-color: var(--line); }
+    .eyebrow {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: .18em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .top-header {
+      position: relative;
+      z-index: 20;
+      background: var(--paper);
+    }
+
+    .nav-word {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      transition: opacity .2s ease;
+    }
+    .nav-word:hover { opacity: .52; }
+
+    .logo-link { display: block; line-height: 0; }
+    .logo-link img { display: block; }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr .74fr;
+      min-height: calc(74 * min(var(--vh, 1vh), 1vh));
+    }
+
+    .hero-photo {
+      min-height: calc(74 * min(var(--vh, 1vh), 1vh));
+      overflow: hidden;
+      position: relative;
+      background: #625045;
+    }
+
+    .hero-photo img, .campaign-card img, .micro-card img, .product-photo img, .final-editorial img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      filter: saturate(.62) sepia(.12) contrast(.95);
+    }
+
+    .hero-photo img { position: absolute; inset: 0; }
+    .hero-man img { object-position: 52% center; }
+    .hero-abaya img { object-position: 52% center; }
+
+    .hero-title-wrap {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 54%;
+      width: min(430px, calc(100% - 30px));
+      transform: translate(-50%, -50%);
+      color: var(--white);
+      text-align: center;
+      text-shadow: 0 2px 20px rgba(0,0,0,.32);
+    }
+
+    .hero-title-wrap::before, .hero-title-wrap::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 28px;
+      margin: 0 auto 17px;
+      background: rgba(255,255,255,.78);
+    }
+    .hero-title-wrap::after { margin: 18px auto 0; }
+
+    .hero-heading {
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(1.8rem, 3.3vw, 3.7rem);
+      font-weight: 400;
+      letter-spacing: -.06em;
+      line-height: 1.12;
+    }
+
+    .outline-button {
+      min-height: 35px;
+      padding: 10px 15px;
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: .15em;
+      transition: background .24s ease, color .24s ease;
+    }
+
+    .outline-button:hover { background: var(--white); color: var(--ink); }
+
+    .brand-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(74 * min(var(--vh, 1vh), 1vh));
+      padding: 35px 30px;
+      background: #eee7dc;
+    }
+
+    .brand-panel-inner { width: min(100%, 250px); text-align: center; }
+    .brand-panel-logo { width: 132px; height: auto; margin: 0 auto 28px; display: block; }
+    .brand-copy { font-size: 9px; line-height: 1.85; letter-spacing: .055em; text-align: left; }
+    .brand-rule { width: 100%; height: 1px; background: var(--line); margin: 23px 0; }
+
+    .benefit-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+    }
+    .benefit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 70px;
+      padding: 10px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+      font-size: 7px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .benefit:last-child { border-right: 0; }
+
+    .campaign-section { padding: 10px; }
+    .section-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 13px 4px 11px;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-label {
+      margin: 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -.05em;
+    }
+    .section-index { margin: 0; font-size: 7px; font-weight: 500; letter-spacing: .15em; color: var(--muted); }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: 1.28fr .53fr .53fr;
+      gap: 6px;
+      margin-top: 7px;
+      height: 430px;
+    }
+    .campaign-grid.women-grid { grid-template-columns: .53fr .53fr 1.28fr; }
+
+    .campaign-card, .micro-card {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+      background: #b9a895;
+    }
+    .campaign-card img, .micro-card img { position: absolute; inset: 0; transition: transform .65s ease; }
+    .campaign-card:hover img, .micro-card:hover img { transform: scale(1.035); }
+
+    .micro-stack {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 1;
+      padding: 21px;
+      color: var(--white);
+      background: linear-gradient(transparent, rgba(16,12,9,.74));
+    }
+
+    .campaign-heading {
+      margin: 7px 0 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(1.55rem, 2.4vw, 2.7rem);
+      font-weight: 400;
+      letter-spacing: -.06em;
+    }
+
+    .product-area { padding: 34px 18px 43px; background: #f7f3ec; }
+    .product-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-title {
+      margin: 5px 0 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: 29px;
+      font-weight: 400;
+      letter-spacing: -.055em;
+    }
+
+    .filters { display: flex; flex-wrap: wrap; gap: 5px; margin: 15px 0 21px; }
+    .filter-button {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 8px 12px;
+      color: var(--ink);
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: .12em;
+    }
+    .filter-button.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .product-card { min-width: 0; }
+    .product-photo { position: relative; overflow: hidden; aspect-ratio: .76; background: #d9cfc2; }
+    .product-photo img { position: absolute; inset: 0; transition: transform .55s ease; }
+    .product-card:hover .product-photo img { transform: scale(1.035); }
+
+    .heart-button {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      width: 27px;
+      height: 27px;
+      border: 1px solid rgba(23,19,15,.24);
+      background: rgba(247,243,236,.86);
+    }
+
+    .product-name {
+      margin: 10px 0 0;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: .055em;
+      line-height: 1.5;
+    }
+    .product-price { margin: 4px 0 0; color: #65594c; font-size: 8px; }
+    .add-link {
+      margin-top: 10px;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: var(--ink);
+      font-size: 7px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .final-editorial {
+      position: relative;
+      min-height: 470px;
+      overflow: hidden;
+      background: #42362c;
+    }
+    .final-editorial img { position: absolute; inset: 0; filter: saturate(.5) sepia(.2) brightness(.6); }
+    .final-editorial::after { content: ""; position: absolute; inset: 0; background: rgba(29,20,14,.2); }
+    .final-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 470px;
+      padding: 35px;
+      color: var(--white);
+      text-align: center;
+    }
+    .final-heading {
+      margin: 8px 0 0;
+      font-family: "Libre Baskerville", serif;
+      font-size: clamp(2rem, 5vw, 4.8rem);
+      font-weight: 400;
+      letter-spacing: -.07em;
+      line-height: 1.1;
+    }
+
+    .footer-shell { background: var(--ink); color: var(--paper); padding: 46px 25px 32px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: .85fr 1fr 1.5fr;
+      gap: 42px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .footer-logo { display: block; width: 138px; height: auto; }
+    .footer-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 25px; }
+    .footer-nav a { color: inherit; font-size: 8px; font-weight: 500; letter-spacing: .12em; text-decoration: none; }
+    .newsletter-copy { font-size: 9px; line-height: 1.7; max-width: 410px; }
+    .newsletter-form { display: flex; margin-top: 14px; border: 1px solid rgba(244,239,230,.7); }
+    .newsletter-form input {
+      min-width: 0;
+      flex: 1;
+      border: 0;
+      background: transparent;
+      padding: 11px;
+      color: var(--paper);
+      font-size: 9px;
+      outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(244,239,230,.7); }
+    .newsletter-button { border: 0; background: var(--paper); color: var(--ink); padding: 0 15px; font-size: 8px; font-weight: 600; letter-spacing: .08em; }
+    .socials { display: flex; gap: 12px; margin-top: 19px; }
+    .socials a { color: inherit; }
+    .footer-status { min-height: 15px; margin: 9px 0 0; font-size: 8px; }
+
+    .drawer { transform: translateX(102%); transition: transform .32s ease; }
+    .drawer.open { transform: translateX(0); }
+    .backdrop { opacity: 0; pointer-events: none; transition: opacity .24s ease; }
+    .backdrop.open { opacity: 1; pointer-events: auto; }
+    .toast { opacity: 0; pointer-events: none; transform: translate(-50%, 12px); transition: opacity .2s, transform .2s; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (max-width: 860px) {
+      .desktop-nav { display: none; }
+      .hero-layout { grid-template-columns: 1fr 1fr; }
+      .brand-panel { grid-column: 1 / -1; min-height: auto; padding: 48px 25px; }
+      .brand-panel-inner { width: min(100%, 500px); }
+      .campaign-grid, .campaign-grid.women-grid { height: 380px; }
+      .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 12px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-layout { grid-template-columns: 1fr 1fr; min-height: 0; }
+      .hero-photo { min-height: calc(57 * min(var(--vh, 1vh), 1vh)); }
+      .hero-title-wrap { width: calc(100% - 18px); }
+      .hero-heading { font-size: 1.55rem; }
+      .hero-title-wrap .eyebrow { font-size: 6px; }
+      .hero-title-wrap::before, .hero-title-wrap::after { height: 18px; margin-bottom: 11px; }
+      .hero-title-wrap::after { margin-top: 12px; }
+      .outline-button { padding: 8px 9px; font-size: 6.5px; }
+      .benefit-row { grid-template-columns: repeat(2, 1fr); }
+      .benefit:nth-child(2) { border-right: 0; }
+      .benefit:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .campaign-section { padding: 7px; }
+      .campaign-grid, .campaign-grid.women-grid {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+      }
+      .campaign-card { min-height: 410px; grid-column: 1 / -1; }
+      .micro-stack { min-height: 190px; }
+      .campaign-grid.women-grid .campaign-card { grid-column: 1 / -1; grid-row: 1; }
+      .campaign-grid.women-grid .micro-stack:nth-child(1) { grid-row: 2; }
+      .campaign-grid.women-grid .micro-stack:nth-child(2) { grid-row: 2; }
+      .product-area { padding: 29px 12px 36px; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .final-editorial, .final-copy { min-height: 390px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .mobile-menu { display: block; }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/6e4b845d05dd79e4.editing_sdk.js" type="text/javascript" integrity="sha512-nfDAoBO2Sn6o6rLYgdnzgUs0nZfi4v1NV7M2ioocHZ6oj+ZnIEUmJGLGqFu2dnCue3Bjs5kWMae4qsFt05LfIA=="></script>
+  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(244, 239, 230);">
+  <div class="app-wrapper">
+   <header data-template-id="header-bar" class="canva-header top-header border-b fine-line px-4 py-3 md:px-7" style="background: rgb(244, 239, 230);">
+    <div class="flex items-center justify-between gap-3">
+     <button id="mobile-menu-button" type="button" class="md:hidden" aria-label="Menü öffnen"> <i data-lucide="menu" class="h-4 w-4"></i> </button>
+     <nav class="desktop-nav flex items-center gap-4" aria-label="Hauptnavigation">
+      <button type="button" data-filter="all" data-template-id="nav-shop" class="canva-button nav-word" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">SHOP</button> <button type="button" data-filter="men" data-template-id="nav-men" class="canva-button nav-word" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">MEN</button> <button type="button" data-filter="women" data-template-id="nav-women" class="canva-button nav-word" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">WOMEN</button> <button type="button" data-filter="abayas" data-template-id="nav-abayas" class="canva-button nav-word" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">ABAYAS</button> <button type="button" data-filter="all" data-template-id="nav-new" class="canva-button nav-word" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">NEW IN</button>
+     </nav><a href="#top" class="logo-link absolute left-1/2 -translate-x-1/2" aria-label="ALMARA Startseite"> <img data-template-id="header-logo-image" class="canva-image w-[98px] md:w-[114px]" loading="lazy" src="canva://MAHWqe1neuI/1" alt="Grünes AM-Monogramm mit ALMARA und TIMELESS STYLE. MODERN YOU."> </a>
+     <div class="ml-auto flex items-center gap-3">
+      <button id="search-toggle" type="button" aria-label="Suche öffnen"><i data-lucide="search" class="h-4 w-4"></i></button> <button id="favorites-toggle" type="button" class="hidden md:block" aria-label="Favoriten anzeigen"><i data-lucide="heart" class="h-4 w-4"></i></button> <button id="cart-toggle" type="button" class="flex items-center gap-1" aria-label="Warenkorb öffnen"> <i data-lucide="shopping-bag" class="h-4 w-4"></i><span id="cart-count" class="text-[8px]">0</span> </button>
+     </div>
+    </div>
+   </header>
+   <nav id="mobile-menu" class="hidden border-b fine-line bg-[#f4efe6] px-5 py-5 md:hidden" aria-label="Mobilnavigation">
+    <div class="grid gap-4">
+     <button type="button" data-filter="all" data-template-id="mobile-nav-shop" class="canva-button nav-word text-left" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">SHOP</button> <button type="button" data-filter="men" data-template-id="mobile-nav-men" class="canva-button nav-word text-left" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">MEN</button> <button type="button" data-filter="women" data-template-id="mobile-nav-women" class="canva-button nav-word text-left" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">WOMEN</button> <button type="button" data-filter="abayas" data-template-id="mobile-nav-abayas" class="canva-button nav-word text-left" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">ABAYAS</button>
+    </div>
+   </nav>
+   <section id="search-panel" class="hidden border-b fine-line bg-[#f4efe6] px-4 py-4">
+    <label data-template-id="search-label" for="product-search" class="canva-text sr-only" style="font-weight: 400; font-style: normal; font-size: 16px;">Produkte durchsuchen</label>
+    <div class="mx-auto flex max-w-3xl items-center border fine-line">
+     <input id="product-search" type="search" class="min-w-0 flex-1 bg-transparent px-4 py-3 text-xs outline-none" placeholder="Kollektion durchsuchen"> <i data-lucide="search" class="mr-4 h-4 w-4"></i>
+    </div>
+   </section>
+   <main id="top">
+    <section class="hero-layout relative" aria-label="ALMARA Kampagne">
+     <div class="hero-photo hero-man">
+      <img data-template-id="hero-man-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/26856014/pexels-photo-26856014.jpeg" alt="Fashionable man posing on staircase steps with sunglasses and trendy outfit in warm sunlight.">
+     </div>
+     <div class="hero-photo hero-abaya">
+      <img data-template-id="hero-abaya-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/32773063/pexels-photo-32773063.jpeg" alt="Elegant woman wearing sunglasses and a black hijab with embroidery standing outdoors.">
+     </div>
+     <div class="hero-title-wrap">
+      <p data-template-id="hero-kicker" class="canva-text eyebrow mb-4" style="color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">THE AUTUMN EDIT</p>
+      <h1 data-template-id="hero-title" class="canva-text hero-heading" style="color: rgb(255, 253, 248); font-weight: 400; font-style: normal; font-size: 32px;">Zeitlos getragen.</h1><button id="hero-shop-button" type="button" data-template-id="hero-button" class="canva-button outline-button mt-6" style="background: transparent; color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">KOLLEKTION ENTDECKEN</button>
+     </div>
+     <aside data-template-id="brand-panel" class="canva-panel brand-panel" style="background: rgb(238, 231, 220);">
+      <div class="brand-panel-inner">
+       <img data-template-id="hero-logo-image" class="canva-image brand-panel-logo" loading="lazy" src="canva://MAHWqfBTeaM/1" alt="Original ALMARA Logo mit Monogramm und Schriftzug">
+       <p data-template-id="brand-panel-title" class="canva-text serif m-0 text-[18px] tracking-[-.05em]" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 16px;">TIMELESS STYLE. MODERN YOU.</p>
+       <div class="brand-rule"></div>
+       <p data-template-id="brand-panel-copy" class="canva-text brand-copy" style="color: rgb(74, 64, 54); font-weight: 400; font-style: normal; font-size: 16px;">ALMARA steht für Mode, die Haltung zeigt. Klassische Silhouetten treffen auf moderne Leichtigkeit – für einen Stil, der bleibt.</p>
+      </div>
+     </aside>
+    </section>
+    <section class="benefit-row" aria-label="ALMARA Vorteile">
+     <div class="benefit"><i data-lucide="globe-2" class="h-3 w-3"></i><span data-template-id="benefit-one" class="canva-text" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">Versand weltweit</span>
+     </div>
+     <div class="benefit"><i data-lucide="truck" class="h-3 w-3"></i><span data-template-id="benefit-two" class="canva-text" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">Kostenloser Versand</span>
+     </div>
+     <div class="benefit"><i data-lucide="leaf" class="h-3 w-3"></i><span data-template-id="benefit-three" class="canva-text" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">Bewusst gewählt</span>
+     </div>
+     <div class="benefit"><i data-lucide="shield-check" class="h-3 w-3"></i><span data-template-id="benefit-four" class="canva-text" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">Sicher einkaufen</span>
+     </div>
+    </section>
+    <section class="campaign-section">
+     <div class="section-top">
+      <h2 data-template-id="men-section-label" class="canva-text section-label" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 24px;">MEN</h2>
+      <p data-template-id="men-section-index" class="canva-text section-index" style="color: rgb(113, 103, 92); font-weight: 500; font-style: normal; font-size: 16px;">01 / MODERN CLASSICS</p>
+     </div>
+     <div class="campaign-grid">
+      <article class="campaign-card">
+       <img data-template-id="men-feature-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/27438330/pexels-photo-27438330.jpeg" alt="Portrait of a fashionable man wearing a vintage blazer and trousers indoors.">
+       <div class="card-overlay">
+        <p data-template-id="men-caption" class="canva-text eyebrow m-0" style="color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">TIMELESS APPEAL</p>
+        <h3 data-template-id="men-title" class="canva-text campaign-heading" style="color: rgb(255, 253, 248); font-weight: 400; font-style: normal; font-size: 19px;">Modern Tailoring</h3><button type="button" data-filter="men" data-template-id="men-button" class="canva-button outline-button mt-4" style="background: transparent; color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">ZUR HERRENKOLLEKTION</button>
+       </div>
+      </article>
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="men-detail-one-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/26856014/pexels-photo-26856014.jpeg" alt="Fashionable man posing on staircase steps with sunglasses and trendy outfit in warm sunlight.">
+       </article>
+       <article class="micro-card"><img data-template-id="men-detail-two-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/32427323/pexels-photo-32427323.jpeg" alt="Stylish beige blazer on a hanger, perfect for formal occasions or business attire.">
+       </article>
+      </div>
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="men-detail-three-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/36203255/pexels-photo-36203255.jpeg" alt="Close-up of a stylish double-breasted blazer with moody lighting.">
+       </article>
+       <article class="micro-card"><img data-template-id="men-detail-four-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/6764932/pexels-photo-6764932.jpeg" alt="Close-up of a sophisticated brown wool coat over a striped shirt and patterned tie.">
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="campaign-section border-y fine-line">
+     <div class="section-top">
+      <h2 data-template-id="women-section-label" class="canva-text section-label" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 24px;">WOMEN</h2>
+      <p data-template-id="women-section-index" class="canva-text section-index" style="color: rgb(113, 103, 92); font-weight: 500; font-style: normal; font-size: 16px;">02 / STILLVOLL</p>
+     </div>
+     <div class="campaign-grid women-grid">
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="women-detail-one-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/19771916/pexels-photo-19771916.jpeg" alt="Back view of a woman in a backless cream silk gown posing gracefully in a studio shoot.">
+       </article>
+       <article class="micro-card"><img data-template-id="women-detail-two-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/30722556/pexels-photo-30722556.jpeg" alt="Soft-focus portrait of a woman in a white dress, sitting in a warm glow.">
+       </article>
+      </div>
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="women-detail-three-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/17306264/pexels-photo-17306264.jpeg" alt="Woman in a silk brown dress posing elegantly indoors surrounded by decorative plants.">
+       </article>
+       <article class="micro-card"><img data-template-id="women-detail-four-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/10302592/pexels-photo-10302592.jpeg" alt="Stylish woman with long hair in olive trench coat posing on a chair in a minimalist sand-filled room.">
+       </article>
+      </div>
+      <article class="campaign-card">
+       <img data-template-id="women-feature-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/35730948/pexels-photo-35730948.jpeg" alt="A woman in a black dress poses dramatically on a spiral staircase.">
+       <div class="card-overlay">
+        <p data-template-id="women-caption" class="canva-text eyebrow m-0" style="color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">KLASSISCH. MODERN. STILLVOLL.</p>
+        <h3 data-template-id="women-title" class="canva-text campaign-heading" style="color: rgb(255, 253, 248); font-weight: 400; font-style: normal; font-size: 19px;">Quiet Confidence</h3><button type="button" data-filter="women" data-template-id="women-button" class="canva-button outline-button mt-4" style="background: transparent; color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">ZUR DAMENKOLLEKTION</button>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="campaign-section">
+     <div class="section-top">
+      <h2 data-template-id="abaya-section-label" class="canva-text section-label" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 24px;">ABAYAS</h2>
+      <p data-template-id="abaya-section-index" class="canva-text section-index" style="color: rgb(113, 103, 92); font-weight: 500; font-style: normal; font-size: 16px;">03 / MODEST EDIT</p>
+     </div>
+     <div class="campaign-grid">
+      <article class="campaign-card">
+       <img data-template-id="abaya-feature-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/27818146/pexels-photo-27818146.jpeg" alt="A stylish Middle Eastern woman in an abaya wearing sunglasses, standing in dramatic lighting.">
+       <div class="card-overlay">
+        <p data-template-id="abaya-caption" class="canva-text eyebrow m-0" style="color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">MODEST ELEGANCE</p>
+        <h3 data-template-id="abaya-title" class="canva-text campaign-heading" style="color: rgb(255, 253, 248); font-weight: 400; font-style: normal; font-size: 19px;">The Abaya Edit</h3><button type="button" data-filter="abayas" data-template-id="abaya-button" class="canva-button outline-button mt-4" style="background: transparent; color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">ZUR ABAYA KOLLEKTION</button>
+       </div>
+      </article>
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="abaya-detail-one-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/29188564/pexels-photo-29188564.jpeg" alt="Stylish woman wearing a beige abaya, standing indoors with a soft shadow backdrop.">
+       </article>
+       <article class="micro-card"><img data-template-id="abaya-detail-two-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/32279508/pexels-photo-32279508.jpeg" alt="A graceful woman in a black abaya stands confidently against a textured neutral backdrop.">
+       </article>
+      </div>
+      <div class="micro-stack">
+       <article class="micro-card"><img data-template-id="abaya-detail-three-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/33448124/pexels-photo-33448124.jpeg" alt="Elegant portrait of a woman in traditional abaya with sunglasses, highlighting cultural fashion.">
+       </article>
+       <article class="micro-card"><img data-template-id="abaya-detail-four-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/8002584/pexels-photo-8002584.jpeg" alt="A woman in a black abaya walks outdoors, showcasing cultural elegance in Dubai.">
+       </article>
+      </div>
+     </div>
+    </section>
+    <section id="products" data-template-id="products-section" class="canva-section product-area" style="background: rgb(247, 243, 236);">
+     <div class="product-head">
+      <div>
+       <p data-template-id="products-kicker" class="canva-text eyebrow m-0" style="color: rgb(113, 103, 92); font-weight: 500; font-style: normal; font-size: 16px;">PRODUCT HIGHLIGHTS</p>
+       <h2 data-template-id="products-title" class="canva-text product-title" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 24px;">Ausgewählte Stücke</h2>
+      </div><span id="product-result-count" class="text-[8px] tracking-[.13em]">6 ARTIKEL</span>
+     </div>
+     <div class="filters" aria-label="Produktfilter">
+      <button type="button" data-filter="all" data-template-id="filter-all" class="canva-button filter-button active" style="background: rgb(23, 19, 15); color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">ALLE</button> <button type="button" data-filter="men" data-template-id="filter-men" class="canva-button filter-button" style="background: transparent; color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">MEN</button> <button type="button" data-filter="women" data-template-id="filter-women" class="canva-button filter-button" style="background: transparent; color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">WOMEN</button> <button type="button" data-filter="abayas" data-template-id="filter-abayas" class="canva-button filter-button" style="background: transparent; color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">ABAYAS</button>
+     </div>
+     <div id="product-grid" class="product-grid">
+      <article class="product-card" data-product="sand-blazer" data-category="men">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Sand Linen Blazer favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Sand Linen Blazer zur Tasche hinzufügen"><img data-template-id="product-blazer-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/30050044/pexels-photo-30050044.jpeg" alt="Stylish woman wearing a beige suit and sunglasses, posing against a neutral backdrop."></button>
+       </div>
+       <p data-template-id="product-blazer-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">SAND LINEN BLAZER</p>
+       <p data-template-id="product-blazer-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">299,00 €</p><button type="button" data-product="sand-blazer" data-template-id="add-blazer" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+      <article class="product-card" data-product="espresso-polo" data-category="men">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Espresso Polo favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Espresso Polo zur Tasche hinzufügen"><img data-template-id="product-polo-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/24509673/pexels-photo-24509673.jpeg" alt="Stylish young man posing in a black polo shirt on a gray background."></button>
+       </div>
+       <p data-template-id="product-polo-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">ESPRESSO POLO</p>
+       <p data-template-id="product-polo-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">129,00 €</p><button type="button" data-product="espresso-polo" data-template-id="add-polo" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+      <article class="product-card" data-product="ivory-trouser" data-category="men">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Ivory Tailored Trouser favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Ivory Tailored Trouser zur Tasche hinzufügen"><img data-template-id="product-trousers-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/8121821/pexels-photo-8121821.jpeg" alt="Close-up of an unrecognizable person wearing a stylish beige suit with hands in pockets outdoors."></button>
+       </div>
+       <p data-template-id="product-trousers-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">IVORY TAILORED TROUSER</p>
+       <p data-template-id="product-trousers-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">159,00 €</p><button type="button" data-product="ivory-trouser" data-template-id="add-trousers" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+      <article class="product-card" data-product="noir-abaya" data-category="abayas">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Noir Flow Abaya favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Noir Flow Abaya zur Tasche hinzufügen"><img data-template-id="product-abaya-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/32279501/pexels-photo-32279501.jpeg" alt="A woman in a stylish black abaya poses against a neutral studio backdrop."></button>
+       </div>
+       <p data-template-id="product-abaya-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">NOIR FLOW ABAYA</p>
+       <p data-template-id="product-abaya-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">239,00 €</p><button type="button" data-product="noir-abaya" data-template-id="add-abaya" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+      <article class="product-card" data-product="ivory-dress" data-category="women">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Ivory Column Dress favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Ivory Column Dress zur Tasche hinzufügen"><img data-template-id="product-dress-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/37347193/pexels-photo-37347193.jpeg" alt="Charming portrait of a woman in a vintage dress with a headscarf, studio setting."></button>
+       </div>
+       <p data-template-id="product-dress-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">IVORY COLUMN DRESS</p>
+       <p data-template-id="product-dress-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">189,00 €</p><button type="button" data-product="ivory-dress" data-template-id="add-dress" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+      <article class="product-card" data-product="midnight-coat" data-category="women">
+       <div class="product-photo">
+        <button type="button" class="heart-button favorite-button" aria-label="Midnight Long Coat favorisieren"><i data-lucide="heart" class="h-3.5 w-3.5"></i></button> <button type="button" class="product-open h-full w-full" aria-label="Midnight Long Coat zur Tasche hinzufügen"><img data-template-id="product-coat-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/6455010/pexels-photo-6455010.jpeg" alt="Young woman posing confidently outdoors in a long black coat on a sandy pathway."></button>
+       </div>
+       <p data-template-id="product-coat-name" class="canva-text product-name" style="color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">MIDNIGHT LONG COAT</p>
+       <p data-template-id="product-coat-price" class="canva-text product-price" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">279,00 €</p><button type="button" data-product="midnight-coat" data-template-id="add-coat" class="canva-button add-cart add-link" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">IN DIE TASCHE</button>
+      </article>
+     </div>
+     <p id="no-products" data-template-id="no-products-text" class="canva-text hidden py-11 text-center text-xs" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">Für diese Auswahl wurden keine Produkte gefunden.</p>
+    </section>
+    <section class="final-editorial">
+     <img data-template-id="editorial-banner-image" class="canva-image" loading="lazy" src="https://images.pexels.com/photos/36058467/pexels-photo-36058467.jpeg" alt="Portrait of a woman in a black abaya with a serene expression standing outdoors against a rustic backdrop.">
+     <div class="final-copy">
+      <div>
+       <p data-template-id="banner-kicker" class="canva-text eyebrow m-0" style="color: rgb(255, 253, 248); font-weight: 500; font-style: normal; font-size: 16px;">THE ALMARA EDIT</p>
+       <h2 data-template-id="banner-title" class="canva-text final-heading" style="color: rgb(255, 253, 248); font-weight: 400; font-style: normal; font-size: 24px;">KLASSISCH. MODERN. STILLVOLL.</h2>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer data-template-id="footer-section" class="canva-footer footer-shell" style="background: rgb(23, 19, 15); color: rgb(244, 239, 230);">
+    <div class="footer-grid">
+     <div>
+      <img data-template-id="footer-logo-image" class="canva-image footer-logo" loading="lazy" src="canva://MAHWqfBTeaM/1" alt="Original ALMARA Logo mit Monogramm und Schriftzug">
+     </div>
+     <nav class="footer-nav" aria-label="Footer Navigation">
+      <a href="#products" data-template-id="footer-link-shop" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">SHOP</a> <a href="#products" data-template-id="footer-link-men" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">MEN</a> <a href="#products" data-template-id="footer-link-women" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">WOMEN</a> <a href="#products" data-template-id="footer-link-abayas" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">ABAYAS</a> <a href="#products" data-template-id="footer-link-new" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">NEW IN</a> <a href="#newsletter" data-template-id="footer-link-contact" class="canva-link" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">KONTAKT</a>
+     </nav>
+     <section id="newsletter">
+      <h2 data-template-id="newsletter-title" class="canva-text eyebrow m-0" style="color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 24px;">JETZT ZUM NEWSLETTER ANMELDEN</h2>
+      <p data-template-id="newsletter-copy" class="canva-text newsletter-copy mt-3" style="color: rgb(244, 239, 230); font-weight: 400; font-style: normal; font-size: 16px;">Erhalten Sie ausgewählte Neuigkeiten, neue Kollektionen und stille Inspirationen von ALMARA.</p>
+      <form id="newsletter-form" class="newsletter-form" novalidate="">
+       <label data-template-id="newsletter-label" for="newsletter-email" class="canva-text sr-only" style="font-weight: 400; font-style: normal; font-size: 16px;">Ihre E-Mail-Adresse</label> <input id="newsletter-email" type="email" required=""> <button id="newsletter-submit" type="submit" data-template-id="newsletter-button" class="canva-button newsletter-button" style="background: rgb(244, 239, 230); color: rgb(23, 19, 15); font-weight: 600; font-style: normal; font-size: 16px;">ANMELDEN</button>
+      </form>
+      <p id="newsletter-status" class="footer-status" aria-live="polite"></p>
+      <div class="socials">
+       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" class="h-4 w-4"></i></a> <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i data-lucide="pin" class="h-4 w-4"></i></a> <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+      </div>
+     </section>
+    </div>
+   </footer>
+  </div>
+  <div id="cart-backdrop" class="backdrop fixed inset-0 z-40 bg-black/50"></div>
+  <aside id="cart-drawer" class="drawer fixed right-0 top-0 z-50 flex h-full w-full max-w-md flex-col bg-[#f4efe6] p-6 shadow-2xl" aria-label="Warenkorb">
+   <div class="flex items-center justify-between border-b fine-line pb-4">
+    <h2 data-template-id="cart-title" class="canva-text serif m-0 text-xl" style="color: rgb(23, 19, 15); font-weight: 400; font-style: normal; font-size: 24px;">Ihre Tasche</h2><button id="cart-close" type="button" aria-label="Warenkorb schließen"><i data-lucide="x" class="h-5 w-5"></i></button>
+   </div>
+   <div id="cart-items" class="flex-1 overflow-y-auto py-4"></div>
+   <p id="cart-empty" data-template-id="cart-empty-text" class="canva-text py-8 text-xs" style="color: rgb(101, 89, 76); font-weight: 400; font-style: normal; font-size: 16px;">Ihre Tasche ist noch leer.</p>
+   <div class="border-t fine-line pt-5">
+    <div class="mb-5 flex justify-between text-xs">
+     <span data-template-id="cart-subtotal-label" class="canva-text" style="color: rgb(23, 19, 15); font-weight: 500; font-style: normal; font-size: 16px;">ZWISCHENSUMME</span> <span id="cart-total">0,00 €</span>
+    </div><button id="checkout-button" type="button" data-template-id="checkout-button" class="canva-button w-full py-4 text-[9px] tracking-[.14em]" style="background: rgb(23, 19, 15); color: rgb(244, 239, 230); font-weight: 500; font-style: normal; font-size: 16px;">ZUR KASSE</button>
+    <p id="checkout-note" class="mt-3 min-h-[15px] text-center text-[9px]" aria-live="polite"></p>
+   </div>
+  </aside>
+  <div id="toast" class="toast fixed bottom-5 left-1/2 z-[60] bg-[#17130f] px-5 py-3 text-[9px] text-[#f4efe6]" aria-live="polite"></div>
+  <script>
+    const products = {
+      "sand-blazer": { name: "Sand Linen Blazer", price: 299 },
+      "espresso-polo": { name: "Espresso Polo", price: 129 },
+      "ivory-trouser": { name: "Ivory Tailored Trouser", price: 159 },
+      "noir-abaya": { name: "Noir Flow Abaya", price: 239 },
+      "ivory-dress": { name: "Ivory Column Dress", price: 189 },
+      "midnight-coat": { name: "Midnight Long Coat", price: 279 }
+    };
+
+    const cart = {};
+    const favorites = new Set();
+    let activeFilter = "all";
+    let newsletterReady = false;
+
+    function euro(value) {
+      return new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(value);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function openCart() {
+      document.getElementById("cart-drawer").classList.add("open");
+      document.getElementById("cart-backdrop").classList.add("open");
+    }
+
+    function closeCart() {
+      document.getElementById("cart-drawer").classList.remove("open");
+      document.getElementById("cart-backdrop").classList.remove("open");
+    }
+
+    function updateCart() {
+      const entries = Object.entries(cart).filter(([, quantity]) => quantity > 0);
+      const itemCount = entries.reduce((total, [, quantity]) => total + quantity, 0);
+      const cartItems = document.getElementById("cart-items");
+
+      document.getElementById("cart-count").textContent = itemCount;
+      document.getElementById("cart-empty").classList.toggle("hidden", entries.length > 0);
+
+      cartItems.innerHTML = entries.map(([id, quantity]) => `
+        <div class="flex items-center justify-between gap-3 border-b border-black/20 py-4">
+          <div>
+            <p class="m-0 text-[9px] font-semibold tracking-[.08em]">${products[id].name.toUpperCase()}</p>
+            <p class="mt-1 text-[10px]">${euro(products[id].price)}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" class="cart-change h-6 w-6 border border-black/25 text-xs" data-id="${id}" data-change="-1" aria-label="Menge reduzieren">−</button>
+            <span class="text-[10px]">${quantity}</span>
+            <button type="button" class="cart-change h-6 w-6 border border-black/25 text-xs" data-id="${id}" data-change="1" aria-label="Menge erhöhen">+</button>
+            <button type="button" class="cart-remove ml-1 text-[7px] underline underline-offset-4" data-id="${id}">ENTFERNEN</button>
+          </div>
+        </div>
+      `).join("");
+
+      const total = entries.reduce((sum, [id, quantity]) => sum + products[id].price * quantity, 0);
+      document.getElementById("cart-total").textContent = euro(total);
+
+      cartItems.querySelectorAll(".cart-change").forEach(button => {
+        button.addEventListener("click", () => {
+          const id = button.dataset.id;
+          cart[id] = Math.max(0, (cart[id] || 0) + Number(button.dataset.change));
+          updateCart();
+        });
+      });
+
+      cartItems.querySelectorAll(".cart-remove").forEach(button => {
+        button.addEventListener("click", () => {
+          delete cart[button.dataset.id];
+          updateCart();
+          showToast("Artikel entfernt");
+        });
+      });
+    }
+
+    function addToCart(id) {
+      cart[id] = (cart[id] || 0) + 1;
+      updateCart();
+      showToast("Zur Tasche hinzugefügt");
+    }
+
+    function filterProducts(filter, scrollToProducts = true) {
+      activeFilter = filter;
+      const query = document.getElementById("product-search").value.toLowerCase().trim();
+      let visible = 0;
+
+      document.querySelectorAll(".filter-button").forEach(button => {
+        button.classList.toggle("active", button.dataset.filter === filter);
+      });
+
+      document.querySelectorAll(".product-card").forEach(card => {
+        const inCategory = filter === "all" || card.dataset.category === filter;
+        const matchesQuery = card.textContent.toLowerCase().includes(query);
+        const show = inCategory && matchesQuery;
+        card.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      });
+
+      document.getElementById("product-result-count").textContent = `${visible} ARTIKEL`;
+      document.getElementById("no-products").classList.toggle("hidden", visible !== 0);
+
+      if (scrollToProducts) {
+        document.getElementById("products").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      lucide.createIcons();
+
+      document.getElementById("mobile-menu-button").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      document.getElementById("search-toggle").addEventListener("click", () => {
+        const panel = document.getElementById("search-panel");
+        panel.classList.toggle("hidden");
+        if (!panel.classList.contains("hidden")) document.getElementById("product-search").focus();
+      });
+
+      document.getElementById("product-search").addEventListener("input", () => filterProducts(activeFilter, false));
+      document.getElementById("hero-shop-button").addEventListener("click", () => filterProducts("all"));
+
+      document.querySelectorAll("[data-filter]").forEach(button => {
+        button.addEventListener("click", () => {
+          filterProducts(button.dataset.filter);
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+
+      document.querySelectorAll(".add-cart, .product-open").forEach(button => {
+        button.addEventListener("click", event => {
+          const card = event.currentTarget.closest(".product-card");
+          if (card) addToCart(card.dataset.product);
+        });
+      });
+
+      document.querySelectorAll(".favorite-button").forEach(button => {
+        button.addEventListener("click", () => {
+          const id = button.closest(".product-card").dataset.product;
+          const icon = button.querySelector("svg");
+
+          if (favorites.has(id)) {
+            favorites.delete(id);
+            icon.style.fill = "none";
+            showToast("Favorit entfernt");
+          } else {
+            favorites.add(id);
+            icon.style.fill = "#17130f";
+            showToast("Zu Favoriten hinzugefügt");
+          }
+        });
+      });
+
+      document.getElementById("favorites-toggle").addEventListener("click", () => {
+        let visible = 0;
+        document.querySelectorAll(".product-card").forEach(card => {
+          const show = favorites.has(card.dataset.product);
+          card.classList.toggle("hidden", !show);
+          if (show) visible += 1;
+        });
+        document.getElementById("product-result-count").textContent = `${visible} FAVORIT${visible === 1 ? "" : "EN"}`;
+        document.getElementById("no-products").classList.toggle("hidden", visible !== 0);
+        document.getElementById("products").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      document.getElementById("cart-toggle").addEventListener("click", openCart);
+      document.getElementById("cart-close").addEventListener("click", closeCart);
+      document.getElementById("cart-backdrop").addEventListener("click", closeCart);
+
+      document.getElementById("checkout-button").addEventListener("click", () => {
+        const hasItems = Object.values(cart).some(quantity => quantity > 0);
+        document.getElementById("checkout-note").textContent = hasItems
+          ? "Bestellanfragen sind in Kürze verfügbar."
+          : "Bitte legen Sie zuerst einen Artikel in die Tasche.";
+      });
+
+      const newsletterForm = document.getElementById("newsletter-form");
+      const newsletterStatus = document.getElementById("newsletter-status");
+      const newsletterSubmit = document.getElementById("newsletter-submit");
+
+      const initResult = await window.dataSdk.init({
+        onDataChanged() {}
+      });
+
+      newsletterReady = initResult.isOk;
+      if (!newsletterReady) newsletterStatus.textContent = "Newsletter-Anmeldung ist momentan nicht verfügbar.";
+
+      newsletterForm.addEventListener("submit", async event => {
+        event.preventDefault();
+        const email = document.getElementById("newsletter-email").value.trim();
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          newsletterStatus.textContent = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+          return;
+        }
+
+        if (!newsletterReady) {
+          newsletterStatus.textContent = "Newsletter-Anmeldung ist momentan nicht verfügbar.";
+          return;
+        }
+
+        newsletterSubmit.disabled = true;
+        newsletterStatus.textContent = "Wird angemeldet …";
+
+        const result = await window.dataSdk.create({
+          email,
+          created_at: new Date().toISOString()
+        });
+
+        if (result.isOk) {
+          newsletterStatus.textContent = "Vielen Dank — Sie sind angemeldet.";
+          newsletterForm.reset();
+        } else {
+          newsletterStatus.textContent = "Die Anmeldung konnte nicht gespeichert werden.";
+        }
+
+        newsletterSubmit.disabled = false;
+      });
+
+      updateCart();
+    });
+  </script>
+ 
+</body></html>
